@@ -1,43 +1,108 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto Web</title>
+    <title>Flor Management System</title>
 
 ```
 <style>
-    body{
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to right, #87CEEB, #E0FFFF);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #FFD6EC, #E6D6FF);
+        color: #5A4A6A;
+    }
+
+    header {
+        background: linear-gradient(135deg, #FFB6D9, #D8B4FE);
+        color: white;
         text-align: center;
-        padding-top: 100px;
+        padding: 50px;
     }
 
-    .contenedor{
-        background-color: white;
-        width: 70%;
-        margin: auto;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    nav {
+        background: #C084FC;
+        text-align: center;
+        padding: 15px;
     }
 
-    h1{
-        color: #1E3A8A;
-    }
-
-    h2{
-        color: #2563EB;
-    }
-
-    h3{
-        color: #6B7280;
-    }
-
-    p{
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        font-weight: bold;
         font-size: 18px;
+    }
+
+    nav a:hover {
+        color: #FFF0F8;
+    }
+
+    section {
+        background: #FFF8FC;
+        margin: 25px;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(200, 150, 255, 0.2);
+    }
+
+    h2 {
+        margin-bottom: 15px;
+        color: #B05AD8;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+
+    img {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+
+    ul {
+        margin-left: 25px;
+        line-height: 2;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 700px;
+        height: 400px;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+    }
+
+    aside {
+        background: #F8EFFF;
+        margin: 25px;
+        padding: 20px;
+        border-left: 6px solid #D8B4FE;
+        border-radius: 15px;
+    }
+
+    footer {
+        background: #C084FC;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .centrado {
+        text-align: center;
     }
 </style>
 ```
@@ -47,22 +112,133 @@
 <body>
 
 ```
-<div class="contenedor">
-    <h1> Sistema de Gestión Empresarial </h1>
+<header>
+    <h1>🌸 Flor Management System 🌸</h1>
+    <p>Organización, creatividad y éxito para tu emprendimiento ✨</p>
+</header>
 
-    <h2>
-        Plataforma diseñada para organizar clientes, productos,
-        inventario y ventas de manera eficiente.
-    </h2>
+<nav>
+    <a href="#inicio">🏠 Inicio</a>
+    <a href="#quienes">🌷 Quiénes Somos</a>
+    <a href="#servicios">🛍️ Servicios</a>
+    <a href="#contacto">📩 Contacto</a>
+</nav>
 
-    <h3>Desarrollado por Flor Muñoz</h3>
+<main>
+
+    <section id="inicio">
+        <h2>🌸 Inicio</h2>
+
+        <p>
+            Bienvenido a Flor Management System, una plataforma diseñada para ayudar a
+            emprendedores y pequeños negocios a gestionar clientes, productos, ventas e
+            inventarios de manera eficiente. Nuestro objetivo es brindar herramientas
+            tecnológicas modernas que faciliten la organización de la información y
+            contribuyan al crecimiento empresarial.
+        </p>
+    </section>
+
+    <section id="quienes">
+
+        <h2>🌷 Quiénes Somos</h2>
+
+        <p>
+            Somos un proyecto enfocado en el desarrollo de soluciones digitales para la
+            administración de negocios y emprendimientos. Flor Management System nace con
+            la finalidad de ofrecer una plataforma sencilla, moderna y eficiente para la
+            gestión de clientes, productos, ventas e inventarios. Nuestro sistema busca
+            optimizar los procesos administrativos mediante herramientas tecnológicas que
+            permitan mejorar la organización y la toma de decisiones. Además, promovemos
+            el uso de la innovación digital para fortalecer la productividad y el
+            crecimiento empresarial. Gracias a una interfaz amigable y accesible, los
+            usuarios pueden gestionar información importante de forma rápida y segura,
+            contribuyendo al éxito de sus actividades comerciales y al desarrollo de sus
+            emprendimientos.
+        </p>
+
+        <img src="empresa.jpg.jpg"
+            alt="Emprendimiento y negocios">
+
+    </section>
+
+    <section id="servicios">
+
+        <article>
+
+            <h2>🛍️ Servicios y Productos</h2>
+
+            <ul>
+                <li>✨ Gestión de clientes</li>
+                <li>📦 Control de inventario</li>
+                <li>💰 Registro de ventas</li>
+                <li>📊 Generación de reportes</li>
+                <li>🛒 Administración de productos</li>
+                <li>🖥️ Soporte técnico</li>
+            </ul>
+
+        </article>
+
+    </section>
+
+    <section class="centrado">
+
+    <h2>🎥 Video Informativo</h2>
 
     <p>
-        Bienvenido a mi primer proyecto web realizado con HTML
-        utilizando Visual Studio Code.
+        Haz clic aquí para ver el video:
     </p>
-</div>
+
+    <a href="https://www.youtube.com/watch?v=MOx64NgKGNw"
+       target="_blank">
+       💖 Ver video en YouTube 💖
+    </a>
+
+</section>
+    <section id="contacto">
+
+        <h2>📩 Contáctanos</h2>
+
+        <p><strong>📧 Correo:</strong> divinamunoz2007@gmail.com</p>
+
+        <p><strong>📱 Teléfono:</strong> 0994979401</p>
+
+        <p><strong>📍 Dirección:</strong> Tarapoa, Ecuador</p>
+
+        <p>
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://instagram.com">Instagram</a> |
+            <a href="https://linkedin.com">LinkedIn</a>
+        </p>
+
+    </section>
+
+    <aside>
+
+        <h3>🎀 Información Especial</h3>
+
+        <p>💝 Descuento especial para nuevos clientes.</p>
+
+        <p>🌸 Atención personalizada de lunes a viernes de 08:00 a 17:00.</p>
+
+        <p>✨ Comprometidos con el crecimiento de tu negocio.</p>
+
+    </aside>
+
+</main>
+
+<footer>
+
+    <p>🌷 Desarrollado por Flor Muñoz 🌷</p>
+
+    <p>Fundamentos de Desarrollo Web - 2026</p>
+
+</footer>
 ```
+
+</body>
+
+</html>
+
 
 </body>
 </html>
