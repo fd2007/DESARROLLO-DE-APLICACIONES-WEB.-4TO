@@ -8,89 +8,62 @@
     <title>Flor Management System</title>
 
 ```
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
     body {
         font-family: 'Segoe UI', sans-serif;
         background: linear-gradient(135deg, #FFD6EC, #E6D6FF);
-        color: #5A4A6A;
     }
 
-    header {
+    .hero {
         background: linear-gradient(135deg, #FFB6D9, #D8B4FE);
         color: white;
         text-align: center;
-        padding: 50px;
+        padding: 100px 20px;
     }
 
-    nav {
-        background: #C084FC;
-        text-align: center;
-        padding: 15px;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 15px;
+    .hero h1 {
+        font-size: 3rem;
         font-weight: bold;
-        font-size: 18px;
     }
 
-    nav a:hover {
-        color: #FFF0F8;
-    }
-
-    section {
+    .seccion {
         background: #FFF8FC;
-        margin: 25px;
-        padding: 25px;
         border-radius: 20px;
-        box-shadow: 0 4px 12px rgba(200, 150, 255, 0.2);
+        padding: 30px;
+        margin-top: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    h2 {
-        margin-bottom: 15px;
-        color: #B05AD8;
-    }
-
-    p {
-        line-height: 1.8;
-    }
-
-    img {
-        width: 100%;
-        max-width: 500px;
-        display: block;
-        margin: 20px auto;
+    .card {
+        border: none;
         border-radius: 20px;
+        transition: transform 0.3s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    ul {
-        margin-left: 25px;
-        line-height: 2;
+    .card:hover {
+        transform: translateY(-5px);
     }
 
-    iframe {
-        width: 100%;
-        max-width: 700px;
-        height: 400px;
-        display: block;
-        margin: auto;
-        border-radius: 20px;
+    .btn-rosa {
+        background-color: #C084FC;
+        color: white;
+        border: none;
+    }
+
+    .btn-rosa:hover {
+        background-color: #B05AD8;
+        color: white;
     }
 
     aside {
         background: #F8EFFF;
-        margin: 25px;
-        padding: 20px;
         border-left: 6px solid #D8B4FE;
         border-radius: 15px;
+        padding: 20px;
     }
 
     footer {
@@ -98,11 +71,18 @@
         color: white;
         text-align: center;
         padding: 20px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
-    .centrado {
-        text-align: center;
+    @media (max-width: 768px) {
+
+        .hero {
+            padding: 50px 15px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
     }
 </style>
 ```
@@ -111,134 +91,263 @@
 
 <body>
 
-```
-<header>
+<header class="hero">
     <h1>🌸 Flor Management System 🌸</h1>
-    <p>Organización, creatividad y éxito para tu emprendimiento ✨</p>
+    <p class="lead">
+        Organización, creatividad y éxito para tu emprendimiento ✨
+    </p>
+
+```
+<a href="#contacto" class="btn btn-light btn-lg mt-3">
+    📩 Contáctanos
+</a>
+```
+
 </header>
 
-<nav>
-    <a href="#inicio">🏠 Inicio</a>
-    <a href="#quienes">🌷 Quiénes Somos</a>
-    <a href="#servicios">🛍️ Servicios</a>
-    <a href="#contacto">📩 Contacto</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+```
+<div class="container">
+
+    <a class="navbar-brand" href="#">
+        🌷 Flor System
+    </a>
+
+    <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="#inicio">🏠 Inicio</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#quienes">🌷 Quiénes Somos</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#servicios">🛍️ Servicios</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#contacto">📩 Contacto</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+```
+
 </nav>
 
-<main>
+<main class="container">
 
-    <section id="inicio">
-        <h2>🌸 Inicio</h2>
+```
+<section id="inicio" class="seccion text-center">
 
-        <p>
-            Bienvenido a Flor Management System, una plataforma diseñada para ayudar a
-            emprendedores y pequeños negocios a gestionar clientes, productos, ventas e
-            inventarios de manera eficiente. Nuestro objetivo es brindar herramientas
-            tecnológicas modernas que faciliten la organización de la información y
-            contribuyan al crecimiento empresarial.
-        </p>
-    </section>
+    <h2>🌸 Bienvenida</h2>
 
-    <section id="quienes">
+    <p>
+        Dios te bendiga. Bienvenido a Flor Management System, una plataforma diseñada para ayudar a
+        emprendedores y pequeños negocios a gestionar clientes, ventas, productos
+        e inventarios de forma organizada y eficiente.
+    </p>
 
-        <h2>🌷 Quiénes Somos</h2>
+    <a href="#servicios" class="btn btn-rosa">
+        Ver Servicios
+    </a>
 
-        <p>
-            Somos un proyecto enfocado en el desarrollo de soluciones digitales para la
-            administración de negocios y emprendimientos. Flor Management System nace con
-            la finalidad de ofrecer una plataforma sencilla, moderna y eficiente para la
-            gestión de clientes, productos, ventas e inventarios. Nuestro sistema busca
-            optimizar los procesos administrativos mediante herramientas tecnológicas que
-            permitan mejorar la organización y la toma de decisiones. Además, promovemos
-            el uso de la innovación digital para fortalecer la productividad y el
-            crecimiento empresarial. Gracias a una interfaz amigable y accesible, los
-            usuarios pueden gestionar información importante de forma rápida y segura,
-            contribuyendo al éxito de sus actividades comerciales y al desarrollo de sus
-            emprendimientos.
-        </p>
+</section>
 
-        <img src="empresa.jpg.jpg"
-            alt="Emprendimiento y negocios">
+<section id="quienes" class="seccion">
 
-    </section>
+    <div class="row align-items-center">
 
-    <section id="servicios">
+        <div class="col-md-6">
 
-        <article>
+            <h2>🌷 Quiénes Somos</h2>
 
-            <h2>🛍️ Servicios y Productos</h2>
+            <p>
+                Somos un proyecto enfocado en el desarrollo de soluciones digitales
+                para la administración de negocios y emprendimientos. Flor Management
+                System busca optimizar procesos administrativos mediante herramientas
+                tecnológicas modernas que permitan mejorar la organización, la
+                productividad y la toma de decisiones. Nuestro objetivo es facilitar
+                el crecimiento empresarial mediante una plataforma amigable,
+                eficiente y accesible para todos los usuarios.
+            </p>
 
-            <ul>
-                <li>✨ Gestión de clientes</li>
-                <li>📦 Control de inventario</li>
-                <li>💰 Registro de ventas</li>
-                <li>📊 Generación de reportes</li>
-                <li>🛒 Administración de productos</li>
-                <li>🖥️ Soporte técnico</li>
-            </ul>
+        </div>
 
-        </article>
+        <div class="col-md-6 text-center">
 
-    </section>
+            <img src="C:\Users\Usuario\OneDrive\Desktop\Desarrollo de AW HTML\empresa.jpg.jpg"
+                alt="Emprendimiento"
+                class="img-fluid rounded shadow">
 
-    <section class="centrado">
+        </div>
+
+    </div>
+
+</section>
+
+<section id="servicios" class="seccion">
+
+    <h2 class="text-center mb-4">
+        🛍️ Servicios y Productos
+    </h2>
+
+    <article>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-3">
+                    <h4>📦 Inventario</h4>
+                    <p>Control y administración de productos.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-3">
+                    <h4>💰 Ventas</h4>
+                    <p>Registro eficiente de ventas y clientes.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card p-3">
+                    <h4>📊 Reportes</h4>
+                    <p>Información para apoyar decisiones empresariales.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+<section class="seccion text-center">
 
     <h2>🎥 Video Informativo</h2>
 
     <p>
-        Haz clic aquí para ver el video:
+        Conoce más sobre emprendimiento y gestión empresarial.
     </p>
 
     <a href="https://www.youtube.com/watch?v=MOx64NgKGNw"
-       target="_blank">
-       💖 Ver video en YouTube 💖
+        target="_blank"
+        class="btn btn-danger">
+
+        ▶ Ver Video en YouTube
+
     </a>
 
 </section>
-    <section id="contacto">
 
-        <h2>📩 Contáctanos</h2>
+<section id="contacto" class="seccion">
 
-        <p><strong>📧 Correo:</strong> divinamunoz2007@gmail.com</p>
+    <h2 class="text-center mb-4">
+        📩 Contáctanos
+    </h2>
 
-        <p><strong>📱 Teléfono:</strong> 0994979401</p>
+    <form>
 
-        <p><strong>📍 Dirección:</strong> Tarapoa, Ecuador</p>
+        <div class="mb-3">
+            <input type="text"
+                class="form-control"
+                placeholder="Nombre completo">
+        </div>
 
-        <p>
-            <a href="https://facebook.com">Facebook</a> |
-            <a href="https://instagram.com">Instagram</a> |
-            <a href="https://linkedin.com">LinkedIn</a>
-        </p>
+        <div class="mb-3">
+            <input type="email"
+                class="form-control"
+                placeholder="Correo electrónico">
+        </div>
 
-    </section>
+        <div class="mb-3">
+            <input type="text"
+                class="form-control"
+                placeholder="Asunto">
+        </div>
 
-    <aside>
+        <div class="mb-3">
+            <textarea
+                class="form-control"
+                rows="5"
+                placeholder="Escribe tu mensaje"></textarea>
+        </div>
 
-        <h3>🎀 Información Especial</h3>
+        <button class="btn btn-rosa">
+            Enviar Mensaje
+        </button>
 
-        <p>💝 Descuento especial para nuevos clientes.</p>
+    </form>
 
-        <p>🌸 Atención personalizada de lunes a viernes de 08:00 a 17:00.</p>
+    <hr>
 
-        <p>✨ Comprometidos con el crecimiento de tu negocio.</p>
+    <div class="text-center">
 
-    </aside>
+        <a href="mailto:divinamunoz2007@gmail.com"
+            class="btn btn-outline-primary m-2">
+            📧 Correo
+        </a>
+
+        <a href="https://instagram.com"
+            target="_blank"
+            class="btn btn-outline-danger m-2">
+            📷 Instagram
+        </a>
+
+        <a href="https://maps.google.com"
+            target="_blank"
+            class="btn btn-outline-success m-2">
+            📍 Ubicación
+        </a>
+
+    </div>
+
+</section>
+
+<aside class="seccion">
+
+    <h3>🎀 Información Especial</h3>
+
+    <p>💝 Descuento especial para nuevos clientes.</p>
+
+    <p>🌸 Horario de atención: Lunes a Viernes de 08:00 a 17:00.</p>
+
+    <p>✨ Comprometidos con el crecimiento de tu negocio.</p>
+
+</aside>
+```
 
 </main>
 
 <footer>
 
-    <p>🌷 Desarrollado por Flor Muñoz 🌷</p>
+```
+<p>🌷 Desarrollado por Flor Muñoz 🌷</p>
 
-    <p>DESARROLLO DE APLICACIONES WEB A - 2026</p>
-
-</footer>
+<p>Desarrollo de Aplicaciones Web A - 2026</p>
 ```
 
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
-</html>
-
-
-</body>
 </html>
